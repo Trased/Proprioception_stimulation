@@ -36,7 +36,7 @@ void setup() {
   hapDrive.enableFreqTrack(true);
   hapDrive.enableAcceleration(true);
   hapDrive.enableRapidStop(true);
-  hapDrive.setVibrate(50);
+  hapDrive.setVibrate(10);
   Serial.println("Driver ready.");
 }
 
