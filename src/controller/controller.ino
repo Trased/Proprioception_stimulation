@@ -6,7 +6,7 @@ Haptic_Driver hapDrive;
 // Test variables, will be modified at next tests
 const int position = 1;
 const int frequency = 80;
-const int weight = 17;
+const int weight = 40;
 const int vibrationValues[] = {0, 10, 20, 30, 40, 50, 60, 70};
 const int delayValues[] = {100, 200, 300};
 const int maxValues = 5;

@@ -38,7 +38,7 @@ while True:
                     df.to_excel(writer, index=False, header=False, startrow=writer.sheets['Sheet1'].max_row)
             else:
                 df.to_excel(output_file, index=False)
-
+            data_list.clear()
             print(f"Data written to {output_file}")
         else:
             counter += 1
