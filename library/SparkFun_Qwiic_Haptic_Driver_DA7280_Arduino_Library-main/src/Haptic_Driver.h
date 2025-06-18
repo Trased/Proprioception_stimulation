@@ -17,7 +17,6 @@
 
 struct hapticSettings
 {
-
     uint8_t motorType;
     float nomVolt;
     float absVolt;
@@ -28,7 +27,6 @@ struct hapticSettings
 
 typedef enum
 {
-
     HAPTIC_SUCCESS,
     E_SEQ_CONTINUE = 0x01,
     E_UVLO = 0x02,

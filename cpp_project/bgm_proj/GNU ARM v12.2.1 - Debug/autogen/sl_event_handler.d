@@ -1,0 +1,153 @@
+autogen/sl_event_handler.o: ../autogen/sl_event_handler.c \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h \
+ ../autogen/sl_event_handler.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_chip.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\em_device.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm220pc22hna.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\core_cm33.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_version.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\arm\cmsis_nvic_virtual.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\sl_interrupt_manager.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\mpu_armv8.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\system_bgm22.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_emu.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_cmu.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_hfxo.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_hfrco.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_fsrco.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_dpll.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_lfxo.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_lfrco.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_ulfrco.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_msc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_icache.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_prs.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_gpio.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_gpio_port.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_ldma.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_ldmaxbar.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_timer.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_usart.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_burtc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_i2c.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_syscfg.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_buram.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_gpcrc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_dcdc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_pdm.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_aes.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_smu.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_rtcc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_letimer.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_iadc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_wdog.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_eusart.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_cryptoacc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_devinfo.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_prs_signals.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_dma_descriptor.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_ldmaxbar_defines.h \
+ D:\01-University\00-Github\Proprioception_stimulation\cpp_project\bgm_proj\autogen/sl_component_catalog.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system_generic.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_bus.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\hardware\board\inc\sl_board_init.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager_init.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_init\inc\sl_device_init_dcdc.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_init\inc\sl_device_init_emu.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\hardware\board\inc\sl_board_control.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h \
+ ../autogen/sl_i2cspm_instances.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\driver\i2cspm\inc\sl_i2cspm.h \
+ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_i2c.h
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
+../autogen/sl_event_handler.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_chip.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\em_device.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm220pc22hna.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\core_cm33.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_version.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_compiler.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\cmsis_gcc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\arm\cmsis_nvic_virtual.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\interrupt_manager\inc\sl_interrupt_manager.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_core.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sli_code_classification.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_status.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\cmsis\core\include\mpu_armv8.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\system_bgm22.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_code_classification.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_emu.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_cmu.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_hfxo.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_hfrco.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_fsrco.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_dpll.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_lfxo.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_lfrco.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_ulfrco.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_msc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_icache.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_prs.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_gpio.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_gpio_port.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_ldma.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_ldmaxbar.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_timer.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_usart.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_burtc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_i2c.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_syscfg.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_buram.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_gpcrc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_dcdc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_pdm.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_aes.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_smu.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_rtcc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_letimer.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_iadc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_wdog.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_eusart.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_cryptoacc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_devinfo.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_prs_signals.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_dma_descriptor.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\bgm22_ldmaxbar_defines.h:
+D:\01-University\00-Github\Proprioception_stimulation\cpp_project\bgm_proj\autogen/sl_component_catalog.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_common.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_system_generic.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_bus.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_assert.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\hardware\board\inc\sl_board_init.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager_init.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_init\inc\sl_device_init_dcdc.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_init\inc\sl_device_init_emu.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\hardware\board\inc\sl_board_control.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\sleeptimer\inc\sl_sleeptimer.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\driver\gpio\inc\sl_gpio.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_gpio.h:
+../autogen/sl_i2cspm_instances.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\driver\i2cspm\inc\sl_i2cspm.h:
+c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\emlib\inc\em_i2c.h:
