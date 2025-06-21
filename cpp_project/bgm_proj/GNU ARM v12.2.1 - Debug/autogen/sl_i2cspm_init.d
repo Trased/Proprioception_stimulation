@@ -60,7 +60,7 @@ autogen/sl_i2cspm_init.o: ../autogen/sl_i2cspm_init.c \
  c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h \
  c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h \
  c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h \
- D:\01-University\00-Github\Proprioception_stimulation\cpp_project\bgm_proj\config/sl_i2cspm_mikroe_config.h
+ D:\01-University\00-Github\Proprioception_stimulation\cpp_project\bgm_proj\config/sl_i2cspm_da7280_config.h
 c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\toolchain\inc\sl_gcc_preinclude.h:
 c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\driver\i2cspm\inc\sl_i2cspm.h:
 c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\device\siliconlabs\bgm22\include\em_device.h:
@@ -122,4 +122,4 @@ c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\
 c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\common\inc\sl_enum.h:
 c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\clock_manager\inc\sl_clock_manager.h:
 c:\users\v\simplicitystudio\sdks\simplicity_sdk\platform\service\device_manager\inc\sl_device_clock.h:
-D:\01-University\00-Github\Proprioception_stimulation\cpp_project\bgm_proj\config/sl_i2cspm_mikroe_config.h:
+D:\01-University\00-Github\Proprioception_stimulation\cpp_project\bgm_proj\config/sl_i2cspm_da7280_config.h:

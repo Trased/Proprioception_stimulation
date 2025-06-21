@@ -30,17 +30,17 @@ struct hapticSettings
 typedef enum
 {
   HAPTIC_SUCCESS,
-  E_SEQ_CONTINUE            = 0x01,
-  E_UVLO                    = 0x02,
-  HAPTIC_HW_ERROR           = 0x03,
-  E_SEQ_DONE                = 0x04,
-  HAPTIC_INCORR_PARAM       = 0x05,
-  HAPTIC_UNKNOWN_ERROR      = 0x06,
-  E_OVERTEMP_CRIT           = 0x08,
-  E_SEQ_FAULT               = 0x10,
-  E_WARNING                 = 0x20,
-  E_ACTUATOR_FAULT          = 0x40,
-  E_OC_FAULT                = 0x80
+  E_SEQ_CONTINUE = 0x01,
+  E_UVLO = 0x02,
+  HAPTIC_HW_ERROR,
+  E_SEQ_DONE = 0x04,
+  HAPTIC_INCORR_PARAM,
+  HAPTIC_UNKNOWN_ERROR,
+  E_OVERTEMP_CRIT = 0x08,
+  E_SEQ_FAULT = 0x10,
+  E_WARNING = 0x20,
+  E_ACTUATOR_FAULT = 0x40,
+  E_OC_FAULT = 0x80
 } event_t;
 
 typedef enum
@@ -66,11 +66,11 @@ typedef enum
 
 enum OPERATION_MODES
 {
-  INACTIVE                  = 0x00,
-  DRO_MODE                  = 0x01,
-  PWM_MODE                  = 0x02,
-  RTWM_MODE                 = 0x03,
-  ETWM_MODE                 = 0x04
+  INACTIVE = 0x00,
+  DRO_MODE,
+  PWM_MODE,
+  RTWM_MODE,
+  ETWM_MODE
 };
 
 enum SNPMEM_ARRAY_POS
@@ -90,65 +90,64 @@ enum SNPMEM_REGS
   SNP_ENDPOINTERS_REGS      = 0x88,
   END_OF_MEM                = 0xE7
 };
-
 enum REGISTERS
 {
-  CHIP_REV_REG              = 0x00,
-  IRQ_EVENT1                = 0x03,
-  IRQ_EVENT_WARN_DIAG       = 0x04,
-  IRQ_EVENT_SEQ_DIAG        = 0x05,
-  IRQ_STATUS1               = 0x06,
-  IRQ_MASK1                 = 0x07,
-  CIF_I2C1                  = 0x08,
-  FRQ_LRA_PER_H             = 0x0A,
-  FRQ_LRA_PER_L             = 0x0B,
-  ACTUATOR1                 = 0x0C,
-  ACTUATOR2                 = 0x0D,
-  ACTUATOR3                 = 0x0E,
-  CALIB_V2I_H               = 0x0F,
-  CALIB_V2I_L               = 0x10,
-  CALIB_IMP_H               = 0x11,
-  CALIB_IMP_L               = 0x12,
-  TOP_CFG1                  = 0x13,
-  TOP_CFG2                  = 0x14,
-  TOP_CFG3                  = 0x15,
-  TOP_CFG4                  = 0x16,
-  TOP_INT_CFG1              = 0x17,
-  TOP_INT_CFG6_H            = 0x1C,
-  TOP_INT_CFG6_L            = 0x1D,
-  TOP_INT_CFG7_H            = 0x1E,
-  TOP_INT_CFG7_L            = 0x1F,
-  TOP_INT_CFG8              = 0x20,
-  TOP_CTL1                  = 0x22,
-  TOP_CTL2                  = 0x23,
-  SEQ_CTL1                  = 0x24,
-  SWG_C1                    = 0x25,
-  SWG_C2                    = 0x26,
-  SWG_C3                    = 0x27,
-  SEQ_CTL2                  = 0x28,
-  GPI_0_CTL                 = 0x29,
-  GPI_1_CTL                 = 0x2A,
-  GPI_2_CTL                 = 0x2B,
-  MEM_CTL1                  = 0x2C,
-  MEM_CTL2                  = 0x2D,
-  ADC_DATA_H1               = 0x2E,
-  ADC_DATA_L1               = 0x2F,
-  POLARITY                  = 0x43,
-  LRA_AVR_H                 = 0x44,
-  LRA_AVR_L                 = 0x45,
-  FRQ_LRA_PER_ACT_H         = 0x46,
-  FRQ_LRA_PER_ACT_L         = 0x47,
-  FRQ_PHASE_H               = 0x48,
-  FRQ_PHASE_L               = 0x49,
-  FRQ_CTL                   = 0x4C,
-  TRIM3                     = 0x5F,
-  TRIM4                     = 0x60,
-  TRIM6                     = 0x62,
-  TOP_CFG5                  = 0x6E,
-  IRQ_EVENT_ACTUATOR_FAULT  = 0x81,
-  IRQ_STATUS2               = 0x82,
-  IRQ_MASK2                 = 0x83,
-  SNP_MEM_X                 = 0x84
+  CHIP_REV_REG = 0x00,
+  IRQ_EVENT1 = 0x03,
+  IRQ_EVENT_WARN_DIAG,
+  IRQ_EVENT_SEQ_DIAG,
+  IRQ_STATUS1,
+  IRQ_MASK1,
+  CIF_I2C1,
+  FRQ_LRA_PER_H = 0x0A,
+  FRQ_LRA_PER_L,
+  ACTUATOR1,
+  ACTUATOR2,
+  ACTUATOR3,
+  CALIB_V2I_H,
+  CALIB_V2I_L = 0x10,
+  CALIB_IMP_H,
+  CALIB_IMP_L,
+  TOP_CFG1,
+  TOP_CFG2,
+  TOP_CFG3,
+  TOP_CFG4,
+  TOP_INT_CFG1,
+  TOP_INT_CFG6_H = 0x1C,
+  TOP_INT_CFG6_L,
+  TOP_INT_CFG7_H,
+  TOP_INT_CFG7_L,
+  TOP_INT_CFG8 = 0x20,
+  TOP_CTL1 = 0x22,
+  TOP_CTL2,
+  SEQ_CTL1,
+  SWG_C1,
+  SWG_C2,
+  SWG_C3,
+  SEQ_CTL2,
+  GPI_0_CTL,
+  GPI_1_CTL,
+  GPI_2_CTL,
+  MEM_CTL1,
+  MEM_CTL2,
+  ADC_DATA_H1,
+  ADC_DATA_L1,
+  POLARITY = 0x43,
+  LRA_AVR_H,
+  LRA_AVR_L,
+  FRQ_LRA_PER_ACT_H,
+  FRQ_LRA_PER_ACT_L,
+  FRQ_PHASE_H,
+  FRQ_PHASE_L,
+  FRQ_CTL = 0x4C,
+  TRIM3 = 0x5F,
+  TRIM4,
+  TRIM6 = 0x62,
+  TOP_CFG5 = 0x6E,
+  IRQ_EVENT_ACTUATOR_FAULT = 0x81,
+  IRQ_STATUS2,
+  IRQ_MASK2,
+  SNP_MEM_X
 };
 
 
@@ -163,7 +162,7 @@ public:
 
   Haptic_Driver(uint8_t address = I2C_ADDR);
 
-  bool begin(sl_i2cspm_t &i2c_port);
+  bool begin(sl_i2cspm_t *i2c_port);
 
   bool setActuatorType(uint8_t type);
 

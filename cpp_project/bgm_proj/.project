@@ -352,16 +352,6 @@
 			<locationURI>STUDIO_SDK_LOC/platform/driver/i2cspm/src/sl_i2cspm.c</locationURI>
 		</link>
 		<link>
-			<name>simplicity_sdk_2024.12.2/platform/driver/leddrv/inc/sl_led.h</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/driver/leddrv/inc/sl_led.h</locationURI>
-		</link>
-		<link>
-			<name>simplicity_sdk_2024.12.2/platform/driver/leddrv/src/sl_led.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/platform/driver/leddrv/src/sl_led.c</locationURI>
-		</link>
-		<link>
 			<name>simplicity_sdk_2024.12.2/platform/service/clock_manager/inc/sl_clock_manager.h</name>
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/platform/service/clock_manager/inc/sl_clock_manager.h</locationURI>

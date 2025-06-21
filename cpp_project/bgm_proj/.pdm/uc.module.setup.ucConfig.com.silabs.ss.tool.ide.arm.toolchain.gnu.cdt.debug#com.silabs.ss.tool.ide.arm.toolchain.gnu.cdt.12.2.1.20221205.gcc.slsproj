@@ -5,14 +5,14 @@
     <file name="sl_memory_manager_region_config.h" generated="true" linked="false"/>
     <file name="sl_clock_manager_oscillator_config.h" generated="true" linked="false"/>
     <file name="sl_clock_manager_tree_config.h" generated="true" linked="false"/>
-    <file name="sl_i2cspm_mikroe_config.h" generated="true" linked="false"/>
+    <file name="sl_i2cspm_da7280_config.h" generated="true" linked="false"/>
     <file name="sl_sleeptimer_config.h" generated="true" linked="false"/>
     <file name="sl_board_control_config.h" generated="true" linked="false"/>
     <file name="sl_core_config.h" generated="true" linked="false"/>
     <file name="sl_device_init_dcdc_config.h" generated="true" linked="false"/>
-    <file name="sl_device_init_emu_config.h" generated="true" linked="false"/>
     <file name="sl_interrupt_manager_s2_config.h" generated="true" linked="false"/>
     <file name="emlib_core_debug_config.h" generated="true" linked="false"/>
+    <file name="sl_device_init_emu_config.h" generated="true" linked="false"/>
   </folder>
   <includePath uri="studio:/project/config"/>
 </project>

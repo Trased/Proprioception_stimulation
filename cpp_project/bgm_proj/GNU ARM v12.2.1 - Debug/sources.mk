@@ -33,7 +33,6 @@ simplicity_sdk_2024.12.2/platform/Device/SiliconLabs/BGM22/Source \
 simplicity_sdk_2024.12.2/platform/common/src \
 simplicity_sdk_2024.12.2/platform/driver/gpio/src \
 simplicity_sdk_2024.12.2/platform/driver/i2cspm/src \
-simplicity_sdk_2024.12.2/platform/driver/leddrv/src \
 simplicity_sdk_2024.12.2/platform/emlib/src \
 simplicity_sdk_2024.12.2/platform/peripheral/src \
 simplicity_sdk_2024.12.2/platform/service/clock_manager/src \

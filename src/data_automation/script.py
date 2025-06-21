@@ -6,7 +6,7 @@ data_list = []
 output_file = 'data_output.xlsx'
 file_exists = os.path.isfile(output_file)
 
-ser = serial.Serial('COM10', 115200, timeout=1)
+ser = serial.Serial('COM5', 115200, timeout=1)
 while True:
     print("Waiting for data")
     raw = ser.readline()

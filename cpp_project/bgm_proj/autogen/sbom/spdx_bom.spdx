@@ -13,7 +13,7 @@ DocumentNamespace: https://silabs.com
 
 ## Creation Information
 Creator: Organization: Silicon Laboratories, Inc.
-Created: 2025-06-18T15:48:01.047663500Z
+Created: 2025-06-21T10:40:37.078526600Z
 ## Relationships
 Relationship: SPDXRef-DOCUMENT DESCRIBES SPDXRef-simplicity_sdk-2024.12.2
 
@@ -61,7 +61,6 @@ Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-emlib_common
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-emlib_i2c
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-device_init_dcdc
-Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-device_init_emu
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-device_peripheral_hal
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-cmsis_core
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-interrupt_manager
@@ -80,7 +79,7 @@ Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-BGM220PC22HNA_config
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-status
 Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-gpio
-Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-led
+Relationship: SPDXRef-simplicity_sdk-2024.12.2 CONTAINS SPDXRef-simplicity_sdk-2024.12.2-device_init_emu
 
 ## Package Information
 PackageName: BGM220PC22HNA
@@ -479,17 +478,6 @@ PackageLicenseConcluded: Zlib
 Relationship: SPDXRef-simplicity_sdk-2024.12.2-device_init_dcdc CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
 
 ## Package Information
-PackageName: Energy Management Unit (EMU)
-SPDXID: SPDXRef-simplicity_sdk-2024.12.2-device_init_emu
-PackageVersion: 2024.12.2
-PrimaryPackagePurpose: LIBRARY
-PackageDownloadLocation: NOASSERTION
-PackageSupplier: Organization: Silicon Laboratories, Inc.
-PackageLicenseConcluded: Zlib
-## Relationships
-Relationship: SPDXRef-simplicity_sdk-2024.12.2-device_init_emu CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
-
-## Package Information
 PackageName: Device Manager Peripheral HAL
 SPDXID: SPDXRef-simplicity_sdk-2024.12.2-device_peripheral_hal
 PackageVersion: 2024.12.2
@@ -703,12 +691,12 @@ PackageLicenseConcluded: Zlib
 Relationship: SPDXRef-simplicity_sdk-2024.12.2-gpio CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
 
 ## Package Information
-PackageName: Generic LED API
-SPDXID: SPDXRef-simplicity_sdk-2024.12.2-led
+PackageName: Energy Management Unit (EMU)
+SPDXID: SPDXRef-simplicity_sdk-2024.12.2-device_init_emu
 PackageVersion: 2024.12.2
 PrimaryPackagePurpose: LIBRARY
 PackageDownloadLocation: NOASSERTION
 PackageSupplier: Organization: Silicon Laboratories, Inc.
 PackageLicenseConcluded: Zlib
 ## Relationships
-Relationship: SPDXRef-simplicity_sdk-2024.12.2-led CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2
+Relationship: SPDXRef-simplicity_sdk-2024.12.2-device_init_emu CONTAINED_BY SPDXRef-simplicity_sdk-2024.12.2

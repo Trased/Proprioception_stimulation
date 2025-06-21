@@ -3,7 +3,7 @@
   "specVersion" : "1.6",
   "version" : 1,
   "metadata" : {
-    "timestamp" : "2025-06-18T15:48:01.047663500Z",
+    "timestamp" : "2025-06-21T10:40:37.078526600Z",
     "authors" : [ {
       "name" : "Silicon Laboratories, Inc."
     } ],
@@ -456,18 +456,6 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.2:device_init_emu",
-      "name" : "Energy Management Unit (EMU)",
-      "version" : "2024.12.2",
-      "supplier" : {
-        "name" : "Silicon Laboratories, Inc."
-      },
-      "licenses" : [ {
-        "expression" : "Zlib"
-      } ]
-    }, {
-      "scope" : "required",
-      "type" : "library",
       "bom-ref" : "simplicity_sdk:2024.12.2:device_peripheral_hal",
       "name" : "Device Manager Peripheral HAL",
       "version" : "2024.12.2",
@@ -704,8 +692,8 @@
     }, {
       "scope" : "required",
       "type" : "library",
-      "bom-ref" : "simplicity_sdk:2024.12.2:led",
-      "name" : "Generic LED API",
+      "bom-ref" : "simplicity_sdk:2024.12.2:device_init_emu",
+      "name" : "Energy Management Unit (EMU)",
       "version" : "2024.12.2",
       "supplier" : {
         "name" : "Silicon Laboratories, Inc."

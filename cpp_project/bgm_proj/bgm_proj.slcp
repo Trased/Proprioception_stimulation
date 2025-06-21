@@ -31,9 +31,8 @@ component:
 - {id: clock_manager}
 - {id: cpp_support}
 - {id: device_init}
-- instance: [mikroe]
+- instance: [da7280]
   id: i2cspm
-- {id: led}
 - {id: sl_system}
 - {id: sleeptimer}
 define:

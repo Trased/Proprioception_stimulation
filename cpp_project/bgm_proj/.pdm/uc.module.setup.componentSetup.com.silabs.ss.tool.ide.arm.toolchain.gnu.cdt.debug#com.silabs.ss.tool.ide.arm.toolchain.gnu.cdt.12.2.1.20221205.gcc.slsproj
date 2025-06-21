@@ -245,14 +245,6 @@
             <file name="sl_i2cspm.h" uri="studio:/sdk/platform/driver/i2cspm/inc/sl_i2cspm.h"/>
           </folder>
         </folder>
-        <folder name="leddrv">
-          <folder name="src">
-            <file name="sl_led.c" uri="studio:/sdk/platform/driver/leddrv/src/sl_led.c"/>
-          </folder>
-          <folder name="inc">
-            <file name="sl_led.h" uri="studio:/sdk/platform/driver/leddrv/inc/sl_led.h"/>
-          </folder>
-        </folder>
       </folder>
       <folder name="peripheral">
         <folder name="inc">
@@ -296,7 +288,6 @@
   <includePath uri="studio:/sdk/platform/driver/i2cspm/inc"/>
   <includePath uri="studio:/sdk/platform/service/interrupt_manager/inc"/>
   <includePath uri="studio:/sdk/platform/service/interrupt_manager/inc/arm"/>
-  <includePath uri="studio:/sdk/platform/driver/leddrv/inc"/>
   <includePath uri="studio:/sdk/platform/service/memory_manager/inc"/>
   <includePath uri="studio:/sdk/platform/common/toolchain/inc"/>
   <includePath uri="studio:/sdk/platform/service/system/inc"/>

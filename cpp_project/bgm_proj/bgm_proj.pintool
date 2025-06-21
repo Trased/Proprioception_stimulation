@@ -2,13 +2,13 @@
 <device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="pin_tool.BGM220PC22HNA" partId="mcu.arm.efr32.bg22.bgm220pc22hna" contextId="com.silabs.sdk.stack.sisdk:2024.12.2._1640345256">
   <mode name="DefaultMode">
     <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
-    <property object="I2C1" propertyId="ABModule.selectedRequirement" value="i2c%T%SL_I2CSPM_MIKROE%T%sl_i2cspm_mikroe_config.h"/>
-    <property object="I2C1" propertyId="ABPeripheral.included" value="true"/>
-    <property object="I2C1" propertyId="peripheral.name" value="i2c0"/>
-    <property object="PORTIO" propertyId="portio.i2c1.enable.scl" value="Enabled"/>
-    <property object="PORTIO" propertyId="portio.i2c1.enable.sda" value="Enabled"/>
-    <property object="PORTIO" propertyId="portio.i2c1.location.scl" value="50"/>
-    <property object="PORTIO" propertyId="portio.i2c1.location.sda" value="51"/>
+    <property object="I2C0" propertyId="ABModule.selectedRequirement" value="i2c%T%SL_I2CSPM_DA7280%T%sl_i2cspm_da7280_config.h"/>
+    <property object="I2C0" propertyId="ABPeripheral.included" value="true"/>
+    <property object="I2C0" propertyId="peripheral.name" value=""/>
+    <property object="PORTIO" propertyId="portio.i2c0.enable.scl" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.i2c0.enable.sda" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.i2c0.location.scl" value="50"/>
+    <property object="PORTIO" propertyId="portio.i2c0.location.sda" value="51"/>
   </mode>
   <modeTransition>
     <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>

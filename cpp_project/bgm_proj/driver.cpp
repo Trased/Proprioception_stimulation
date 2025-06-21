@@ -8,9 +8,9 @@ _address(address),
 _i2cPort(nullptr)
 {}
 
-bool Haptic_Driver::begin(sl_i2cspm_t &i2cPort)
+bool Haptic_Driver::begin(sl_i2cspm_t *i2cPort)
 {
-    _i2cPort = &i2cPort;
+    _i2cPort = i2cPort;
     uint8_t chipRev = _readRegister(CHIP_REV_REG);
 
     return (chipRev == CHIP_REV);
@@ -473,7 +473,3 @@ bool Haptic_Driver::_writeWaveFormMemory(uint8_t waveFormArray[])
     _writeRegister(CIF_I2C1, 0x7F, 1, 7);
     return ok;
 }
-
-
-
-

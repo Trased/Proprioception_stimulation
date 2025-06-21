@@ -77,22 +77,6 @@
 // [USART1]$
 
 // $[I2C1]
-// I2C1 SCL on PD02
-#ifndef I2C1_SCL_PORT                           
-#define I2C1_SCL_PORT                            SL_GPIO_PORT_D
-#endif
-#ifndef I2C1_SCL_PIN                            
-#define I2C1_SCL_PIN                             2
-#endif
-
-// I2C1 SDA on PD03
-#ifndef I2C1_SDA_PORT                           
-#define I2C1_SDA_PORT                            SL_GPIO_PORT_D
-#endif
-#ifndef I2C1_SDA_PIN                            
-#define I2C1_SDA_PIN                             3
-#endif
-
 // [I2C1]$
 
 // $[PDM]
@@ -105,6 +89,22 @@
 // [IADC0]$
 
 // $[I2C0]
+// I2C0 SCL on PD02
+#ifndef I2C0_SCL_PORT                           
+#define I2C0_SCL_PORT                            SL_GPIO_PORT_D
+#endif
+#ifndef I2C0_SCL_PIN                            
+#define I2C0_SCL_PIN                             2
+#endif
+
+// I2C0 SDA on PD03
+#ifndef I2C0_SDA_PORT                           
+#define I2C0_SDA_PORT                            SL_GPIO_PORT_D
+#endif
+#ifndef I2C0_SDA_PIN                            
+#define I2C0_SDA_PIN                             3
+#endif
+
 // [I2C0]$
 
 // $[EUART0]

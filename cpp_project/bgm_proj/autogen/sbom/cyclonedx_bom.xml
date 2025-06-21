@@ -10,7 +10,7 @@ referenced in this SBOM.)
 -->
 <bom xmlns="http://cyclonedx.org/schema/bom/1.6" version="1">
   <metadata>
-    <timestamp>2025-06-18T15:48:01.047663500Z</timestamp>
+    <timestamp>2025-06-21T10:40:37.078526600Z</timestamp>
     <authors>
       <author>
         <name>Silicon Laboratories, Inc.</name>
@@ -385,16 +385,6 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.2:device_init_emu" type="library">
-          <name>Energy Management Unit (EMU)</name>
-          <version>2024.12.2</version>
-	      <supplier>
-	        <name>Silicon Laboratories, Inc.</name>
-	      </supplier>
-          <licenses>
-            <expression>Zlib</expression>
-          </licenses>
-        </component>
         <component bom-ref="simplicity_sdk:2024.12.2:device_peripheral_hal" type="library">
           <name>Device Manager Peripheral HAL</name>
           <version>2024.12.2</version>
@@ -595,8 +585,8 @@ referenced in this SBOM.)
             <expression>Zlib</expression>
           </licenses>
         </component>
-        <component bom-ref="simplicity_sdk:2024.12.2:led" type="library">
-          <name>Generic LED API</name>
+        <component bom-ref="simplicity_sdk:2024.12.2:device_init_emu" type="library">
+          <name>Energy Management Unit (EMU)</name>
           <version>2024.12.2</version>
 	      <supplier>
 	        <name>Silicon Laboratories, Inc.</name>
