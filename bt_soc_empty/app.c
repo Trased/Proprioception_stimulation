@@ -45,6 +45,7 @@
 #define MSG_MAX_LEN 128
 // The advertising set handle allocated from Bluetooth stack.
 static uint8_t advertising_set_handle = 0xff;
+static uint8_t _conn_handle = 0xff;
 
 // Application Init.
 void app_init(void)
@@ -84,6 +85,18 @@ void app_process_action(void)
 {
     if (app_is_process_required())
     {
+        if(da7280_getActivityDone())
+          {
+            const char msg[] = "Activity time ended. Please enter the specifications again!";
+            sl_status_t sc = sl_bt_gatt_server_send_notification(
+              _conn_handle,
+              gattdb_message_response,
+              sizeof(msg) - 1,
+              (const uint8_t*)msg);
+            app_assert_status(sc);
+
+            da7280_setActivityDone(false);
+          }
         /////////////////////////////////////////////////////////////////////////////
         // Put your additional application code here!                              //
         // This is will run each time app_proceed() is called.                     //
@@ -128,7 +141,9 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
                                            sl_bt_legacy_advertiser_connectable);
         app_assert_status(sc);
         break;
-
+    case sl_bt_evt_connection_opened_id:
+        _conn_handle = evt->data.evt_connection_opened.connection;
+        break;
     case sl_bt_evt_gatt_server_user_write_request_id:
         const sl_bt_evt_gatt_server_user_write_request_t *wr = &evt->data.evt_gatt_server_user_write_request;
         if (wr->characteristic == gattdb_weight_value ||
@@ -202,6 +217,7 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
         // -------------------------------
         // This event indicates that a connection was closed.
     case sl_bt_evt_connection_closed_id:
+        _conn_handle = 0xff;
         // Generate data for advertising
         sc = sl_bt_legacy_advertiser_generate_data(
             advertising_set_handle, sl_bt_advertiser_general_discoverable);

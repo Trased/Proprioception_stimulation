@@ -172,9 +172,13 @@ typedef enum
     SNP_MEM_X
 } REGISTERS;
 
+void da7280_setActivityDone(bool status);
+bool da7280_getActivityDone();
+bool da7280_isActivityTimeSet();
+void da7280_performActivity();
 void da7280_resetStateMachine();
 void da7280_setBootStatus(BOOT_STATUS status);
-uint8_t da7280_processUserInput(uint8_t event_value, uint16_t characteristic, char *out_buf, size_t out_buf_len);
+uint8_t da7280_processUserInput(uint32_t event_value, uint16_t characteristic, char *out_buf, size_t out_buf_len);
 bool da7280_begin(sl_i2cspm_t *i2c_port);
 bool da7280_setActuatorType(uint8_t type);
 bool da7280_setMotorSettings(hapticSettings settings);

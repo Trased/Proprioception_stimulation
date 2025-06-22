@@ -1,28 +1,104 @@
 #include "da7280_driver.h"
 #include "da7280_patterns.h"
 #include "gatt_db.h"
-
+#include "sl_sleeptimer.h"
+#include "app.h"
 // local includes
 #include "math.h"
 #include <stdio.h>
 
+#define ARR_MAX_LEN 128
+
 static uint8_t snpMemCopy[100] = {0};
 static sl_i2cspm_t* _i2cPort;
 static const uint8_t _address = DEF_ADDR;
+
 static uint8_t _weight = 0;
+static uint8_t _available_patterns[ARR_MAX_LEN] = {0xFF};
+static uint8_t _parser_idx = 0;
+static uint8_t _pattern_idx = 0xFF;
+static uint32_t _activity_time_ms = 0;
+static bool     _activity_done = false;
+
 static STATE_MACHINE _current_state = IDLE;
 static BOOT_STATUS _boot_sts = BOOT_IN_PROGRESS;
 
 static bool _writeRegister(uint8_t, uint8_t, uint8_t, uint8_t);
 static bool _writeWaveFormMemory(uint8_t waveFormArray[]);
 static uint8_t _readRegister(uint8_t);
+static void _resetStateMachine();
+
+
+void da7280_setActivityDone(bool status)
+{
+  _activity_done = status;
+}
+
+bool da7280_getActivityDone()
+{
+  return _activity_done;
+}
 
 void da7280_setBootStatus(BOOT_STATUS status)
 {
   _boot_sts = status;
 }
 
-uint8_t da7280_processUserInput(uint8_t event_value, uint16_t characteristic, char *out_buf, size_t out_buf_len)
+bool da7280_isActivityTimeSet()
+{
+  return 0 != _activity_time_ms;
+}
+
+void da7280_performActivity()
+{
+  if (_current_state != ACTIVE) {
+    return;
+  }
+  const PatternMapEntry *entry = &pattern_map[_pattern_idx];
+  const PatternStep    *steps = entry->steps;
+  size_t                count = entry->count;
+
+  if (count == 0) {
+    // no steps? something happened, let's leave :D
+    _current_state = IDLE;
+    return;
+  }
+
+  if (_activity_time_ms == 0)
+    {
+      da7280_setVibrate(0);
+      da7280_processUserInput(0xFF, 0xFF, NULL, 0);
+      return;
+    }
+
+  for(uint8_t i = 0; i < count; i++)
+    {
+      da7280_setVibrate(steps[i].force_pct);
+      sl_sleeptimer_delay_millisecond(steps[i].duration_ms);
+
+      if(steps[i].duration_ms > _activity_time_ms)
+        {
+          _activity_time_ms = 0;
+          break;
+        }
+      _activity_time_ms -= steps[i].duration_ms;
+    }
+  da7280_setVibrate(0);
+  if (500 > _activity_time_ms)
+    {
+      _activity_time_ms = 0;
+      da7280_setActivityDone(true);
+      da7280_processUserInput(0xFF, 0xFF, NULL, 0);
+      app_proceed();
+    }
+  else
+    {
+      _activity_time_ms -= 500;
+    }
+  sl_sleeptimer_delay_millisecond(500);
+}
+
+uint8_t da7280_processUserInput(uint32_t event_value, uint16_t characteristic, char *out_buf, size_t out_buf_len)
 {
   if(BOOT_COMPLETED != _boot_sts)
     {
@@ -35,6 +111,7 @@ uint8_t da7280_processUserInput(uint8_t event_value, uint16_t characteristic, ch
     {
       if (gattdb_weight_value == characteristic)
         {
+          _resetStateMachine();
           int match_count = 0;
           int written = snprintf(out_buf, out_buf_len,
                                      "Available patterns are:");
@@ -59,6 +136,8 @@ uint8_t da7280_processUserInput(uint8_t event_value, uint16_t characteristic, ch
                     }
                   offset += (size_t)w;
                   match_count++;
+                  _available_patterns[_parser_idx] = i;
+                  _parser_idx++;
                 }
             }
 
@@ -82,28 +161,77 @@ uint8_t da7280_processUserInput(uint8_t event_value, uint16_t characteristic, ch
       else
         {
           snprintf(out_buf, out_buf_len,
-                   "The received value is ignored in current state. Please enter the actuator weight.");
+                   "The received value is ignored in state %u. Please enter the actuator weight.",
+                   (uint8_t)_current_state);
         }
       break;
     }
     case WEIGHT_INPUT_RECEIVED:
     {
-      _current_state = IDLE;
+      if (gattdb_pattern_value == characteristic)
+        {
+          for(uint8_t i = 0; i < ARR_MAX_LEN; i++)
+            {
+              if(0xFF == _available_patterns[i])
+                {
+                  break;
+                }
+              if(event_value == _available_patterns[i])
+                {
+                  _pattern_idx = event_value;
+                  _current_state = PATTERN_INPUT_RECEIVED;
+                }
+            }
+          if(0xFF == _pattern_idx)
+            {
+              snprintf(out_buf, out_buf_len,
+                       "The received pattern is not available for specified weight. Try again.");
+            }
+          else
+            {
+              snprintf(out_buf, out_buf_len,
+                       "Pattern %u will be used!",
+                       _pattern_idx);
+            }
+        }
+      else
+        {
+          snprintf(out_buf, out_buf_len,
+                   "The received value is ignored in state %u. Please enter the vibration pattern.",
+                   (uint8_t)_current_state);
+        }
       break;
     }
     case PATTERN_INPUT_RECEIVED:
     {
-      _current_state = IDLE;
-      break;
-    }
-    case ACTIVITY_TIME_RECEIVED:
-    {
-      _current_state = IDLE;
+      if (gattdb_activity_value == characteristic)
+        {
+          _activity_time_ms = (uint32_t)event_value*1000;
+          _current_state = ACTIVE;
+          snprintf(out_buf, out_buf_len,
+                   "Activity started! It will last for %u seconds!",
+                   (uint8_t)event_value);
+        }
+      else
+        {
+          snprintf(out_buf, out_buf_len,
+                   "The received value is ignored in state %u. Please enter wanted activity time in seconds.",
+                   (uint8_t)_current_state);
+        }
       break;
     }
     case ACTIVE:
     {
-      _current_state = IDLE;
+      if (0xFF == characteristic)
+        {
+          _current_state = IDLE;
+        }
+      else
+        {
+          snprintf(out_buf, out_buf_len,
+                   "The received value is ignored in state %u. Please wait for activity to end or send reset signal.",
+                   (uint8_t)_current_state);
+        }
       break;
     }
     default:
@@ -493,6 +621,18 @@ bool da7280_setSeqControl(uint8_t repetitions, uint8_t sequenceID)
         return false;
 
     return _writeRegister(SEQ_CTL2, 0xF0, sequenceID, 0) && _writeRegister(SEQ_CTL2, 0x0F, repetitions, 4);
+}
+
+static void _resetStateMachine()
+{
+  _weight = 0;
+  _pattern_idx = 0xFF;
+  _parser_idx = 0;
+
+  for(uint8_t i = 0; i < ARR_MAX_LEN; i++)
+    {
+      _available_patterns[i] = 0xFF;
+    }
 }
 
 static bool _writeRegister(uint8_t reg, uint8_t mask, uint8_t bits, uint8_t startPos)

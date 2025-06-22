@@ -37,6 +37,7 @@
 #else // SL_CATALOG_KERNEL_PRESENT
 #include "sl_main_process_action.h"
 #endif // SL_CATALOG_KERNEL_PRESENT
+#include "da7280_driver.h"
 
 int main(void)
 {
@@ -55,6 +56,17 @@ int main(void)
   app_init();
 
   while (1) {
+    if(da7280_isActivityTimeSet())
+      {
+        da7280_performActivity();
+      }
+
+    uint8_t irqEvent = da7280_getIrqEvent();
+    if(irqEvent != HAPTIC_SUCCESS)
+      {
+        da7280_clearIrq(irqEvent);
+        da7280_setOperationMode(DRO_MODE);
+      }
     // Silicon Labs components process action routine
     // must be called from the super loop.
     sl_main_process_action();
