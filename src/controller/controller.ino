@@ -3,7 +3,6 @@
 
 Haptic_Driver hapDrive;
 
-// Test variables, will be modified at next tests
 const int position = 1;
 const int frequency = 80;
 const int weight = 40;
@@ -113,7 +112,6 @@ void loop()
     String patternString = generateVibrationPattern();
     sendToPC(position, frequency, weight, patternString);
 
-    // wait for next iteration
     delay(3000);
 
     uint8_t irqEvent = hapDrive.getIrqEvent();

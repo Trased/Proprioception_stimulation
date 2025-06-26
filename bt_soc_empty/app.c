@@ -41,7 +41,6 @@
 #include "sl_i2cspm_instances.h"
 #include "da7280_driver.h"
 
-
 #define MSG_MAX_LEN 128
 // The advertising set handle allocated from Bluetooth stack.
 static uint8_t advertising_set_handle = 0xff;
@@ -62,7 +61,9 @@ void app_init(void)
         motorSettings.impedance = 8.0;
         motorSettings.lraFreq = 80;
 
-        if (!da7280_begin(sl_i2cspm_da7280) || !da7280_setMotorSettings(motorSettings) || !da7280_setOperationMode(DRO_MODE))
+        if (!da7280_begin(sl_i2cspm_da7280) ||
+            !da7280_setMotorSettings(motorSettings) ||
+            !da7280_setOperationMode(DRO_MODE))
         {
             da7280_setBootStatus(BOOT_FAILED);
             break;
@@ -74,10 +75,6 @@ void app_init(void)
         da7280_enableRapidStop(true);
         da7280_setVibrate(0);
     } while (0);
-    /////////////////////////////////////////////////////////////////////////////
-    // Put your additional application init code here!                         //
-    // This is called once during start-up.                                    //
-    /////////////////////////////////////////////////////////////////////////////
 }
 
 // Application Process Action.
@@ -85,18 +82,18 @@ void app_process_action(void)
 {
     if (app_is_process_required())
     {
-        if(da7280_getActivityDone())
-          {
+        if (da7280_getActivityDone())
+        {
             const char msg[] = "Activity time ended. Please enter the specifications again!";
             sl_status_t sc = sl_bt_gatt_server_send_notification(
-              _conn_handle,
-              gattdb_message_response,
-              sizeof(msg) - 1,
-              (const uint8_t*)msg);
+                _conn_handle,
+                gattdb_message_response,
+                sizeof(msg) - 1,
+                (const uint8_t *)msg);
             app_assert_status(sc);
 
             da7280_setActivityDone(false);
-          }
+        }
         /////////////////////////////////////////////////////////////////////////////
         // Put your additional application code here!                              //
         // This is will run each time app_proceed() is called.                     //
@@ -179,11 +176,10 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
                 sl_status_t sc;
 
                 sc = sl_bt_gatt_server_send_notification(
-                        wr->connection,
-                        gattdb_message_response,
-                        sizeof(msg) - 1,
-                        (const uint8_t*)msg
-                    );
+                    wr->connection,
+                    gattdb_message_response,
+                    sizeof(msg) - 1,
+                    (const uint8_t *)msg);
                 app_assert_status(sc);
 
                 sc = sl_bt_gatt_server_send_user_write_response(
@@ -203,7 +199,7 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
                     wr->connection,
                     gattdb_message_response,
                     strlen(msg),
-                    (const uint8_t*)msg);
+                    (const uint8_t *)msg);
                 app_assert_status(sc);
 
                 sc = sl_bt_gatt_server_send_user_write_response(
